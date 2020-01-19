@@ -1,11 +1,11 @@
-package com.packt.cardatabase.domain;
+package com.packt.schooldatabase.domain;
 
 import java.util.List;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "owner", schema = "testerschema")
+@Table(name = "owner", schema = "schoolschema")
 
 public class Owner {
 	@Id

@@ -1,4 +1,4 @@
-package com.packt.cardatabase.domain;
+package com.packt.schooldatabase.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -8,7 +8,7 @@ import java.util.List;
 
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-@Table(name = "teacher", schema = "testerschema")
+@Table(name = "teacher", schema = "schoolschema")
 public class Teacher {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -17,7 +17,7 @@ public class Teacher {
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="teacher")
 	@JsonIgnore
-	private List<User> users;
+	private List<Student> students;
 
 	public long getOwnerid() {
 		return ownerid;
@@ -43,12 +43,12 @@ public class Teacher {
 		this.lastname = lastname;
 	}
 
-	public List<User> getUsers() {
-		return users;
+	public List<Student> getStudents() {
+		return students;
 	}
 
-	public void setUsers(List<User> users) {
-		this.users = users;
+	public void setStudents(List<Student> students) {
+		this.students = students;
 	}
 
 	public Teacher() {}

@@ -1,10 +1,10 @@
-package com.packt.cardatabase.domain;
+package com.packt.schooldatabase.domain;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "user", schema = "testerschema")
-public class User {
+@Table(name = "student", schema = "schoolschema")
+public class Student {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
@@ -15,9 +15,9 @@ public class User {
 	@JoinColumn(name = "teacher")
 	private Teacher teacher;
 
-	public User() {}
+	public Student() {}
 
-	public User(String brand, String identitynumber, String color, String registerNumber, int year, int price, Teacher teacher) {
+	public Student(String brand, String identitynumber, String color, String registerNumber, int year, int price, Teacher teacher) {
 		super();
 		this.surname = brand;
 		this.identitynumber = identitynumber;

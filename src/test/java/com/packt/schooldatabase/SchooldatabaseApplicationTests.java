@@ -1,4 +1,4 @@
-package com.packt.cardatabase;
+package com.packt.schooldatabase;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class CardatabaseApplicationTests {
+public class SchooldatabaseApplicationTests {
 
 	@Test
 	public void contextLoads() {

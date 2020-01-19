@@ -1,4 +1,4 @@
-package com.packt.cardatabase.domain;
+package com.packt.schooldatabase.domain;
 
 import java.util.List;
 
